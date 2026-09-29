@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking | LAB ROOM</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">💻</span>
+    <span class="brand-text"><strong>LAB ROOM</strong><small>Computer Laboratory<br>Booking System</small></span>
+  </a>
+  <div class="nav-label">MENU</div>
+  <nav class="side-nav"><a class="" href="../index.html"><span>⌂</span>Home</a>
+<a class="active" href="dashboard.html"><span>📊</span>Dashboard</a>
+<a class="" href="rooms.html"><span>🏫</span>Rooms</a>
+<a class="" href="my-booking.html"><span>📅</span>My Booking</a>
+<a class="" href="contact.html"><span>💬</span>Contact</a>
+<a href="../admin/admin.html"><span>⚙️</span>Admin</a></nav>
+  <div class="sidebar-bottom">
+    <div class="nav-label">SYSTEM</div>
+    <nav class="side-nav">
+      <a href="contact.html"><span>⚙️</span>Help & Support</a>
+      <a href="../index.html"><span>↪</span>Home</a>
+    </nav>
+  </div>
+</aside>
+<section class="main-area">
+<header class="topbar">
+  <div class="topbar-left"><button type="button" class="menu-btn" aria-label="เปิดเมนู">☰</button>
+    <div><div class="topbar-title">LAB ROOM</div><div class="topbar-sub">ระบบจองคอมพิวเตอร์ห้องปฏิบัติการมหาวิทยาลัย</div></div>
+  </div>
+  <div class="user-chip"><div><strong>Student</strong><small>นักศึกษา</small></div><div class="user-avatar">👨‍🎓</div></div>
+</header>
+<main class="container">
+<section class="page-head"><div><p class="eyebrow">RESERVATION</p><h1>จองคอมพิวเตอร์</h1><p>ตรวจสอบรายละเอียดก่อนยืนยันการจอง</p></div></section>
+<section class="booking-layout">
+  <div class="card form-card">
+    <div id="bookingInfo" class="booking-info"></div>
+    <form id="bookingForm">
+      <div class="field"><label>ชื่อผู้จอง *</label><input id="studentName" required placeholder="ชื่อ-นามสกุล"></div>
+      <div class="field"><label>รหัสนักศึกษา *</label><input id="studentId" required placeholder="เช่น 67123456"></div>
+      <div class="field"><label>เบอร์โทรศัพท์</label><input id="phone" placeholder="08x-xxx-xxxx"></div>
+      <div class="checkin-option"><label class="checkbox-label"><input id="checkInNow" type="checkbox"><span><strong>✅ จองและเช็คอินทันที</strong><small>มาถึงห้องแล้ว สามารถเช็คอินพร้อมการจองได้เลย แม้ยังไม่ถึงเวลาเริ่ม</small></span></label></div>
+      <div id="bookingError" class="error-box hidden"></div>
+      <button class="btn btn-primary full" type="submit">ยืนยันการจอง →</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer>LAB ROOM © 2026 · University Computer Laboratory Booking System</footer>
+</section></div>
+<script src="../js/main.js"></script><script src="../js/booking.js"></script>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | LAB ROOM</title><link rel="stylesheet" href="../css/style.css"></head>
+<body class="admin-page">
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">💻</span>
+    <span class="brand-text"><strong>LAB ROOM</strong><small>Computer Laboratory<br>Booking System</small></span>
+  </a>
+  <div class="nav-label">MENU</div>
+  <nav class="side-nav"><a class="active" href="admin.html"><span>📊</span>Dashboard</a>
+<a class="" href="lab-management.html"><span>🏫</span>Lab Management</a>
+<a class="" href="class-schedule.html"><span>🗓️</span>Class Schedule</a>
+<a class="" href="computer-management.html"><span>💻</span>Computer Management</a>
+<a class="" href="booking-management.html"><span>📋</span>Booking Management</a></nav>
+  <div class="sidebar-bottom">
+    <div class="nav-label">SYSTEM</div>
+    <nav class="side-nav">
+      <a href="../admin/admin.html"><span>⚙️</span>System Settings</a>
+      <a href="../index.html"><span>↪</span>User Site</a>
+    </nav>
+  </div>
+</aside>
+<section class="main-area">
+<header class="topbar">
+  <div class="topbar-left"><button type="button" class="menu-btn" aria-label="เปิดเมนู">☰</button>
+    <div><div class="topbar-title">Admin Control Center</div><div class="topbar-sub">จัดการระบบห้องปฏิบัติการ</div></div>
+  </div>
+  <div class="user-chip"><div><strong>Administrator</strong><small>ผู้ดูแลระบบ</small></div><div class="user-avatar">🛡️</div></div>
+</header>
+<main class="container">
+<section class="page-head"><div><p class="eyebrow">ADMIN CONTROL CENTER</p><h1>Admin Dashboard</h1><p>ภาพรวมการใช้งานห้อง Lab, Computer, ตารางเรียน และ Booking</p></div><a class="btn btn-primary" href="lab-management.html">＋ เพิ่มห้อง Lab</a></section>
+<div id="adminStats" class="stats-grid"></div>
+<div class="admin-actions"><a class="btn btn-primary" href="lab-management.html">🏫 Lab Management</a><a class="btn btn-secondary" href="class-schedule.html">🗓️ Class Schedule</a><a class="btn btn-secondary" href="computer-management.html">💻 Computer Management</a><a class="btn btn-secondary" href="booking-management.html">📋 Booking Management</a></div>
+<section class="section-heading"><div><p class="eyebrow">RECENT BOOKINGS</p><h2>รายการจองล่าสุด</h2></div></section><div id="recentBookings" class="table-wrap"></div>
+</main>
+<footer>LAB ROOM © 2026 · University Computer Laboratory Booking System</footer>
+</section></div>
+<script src="../js/main.js"></script><script src="../js/admin.js"></script>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Management | LAB ROOM</title><link rel="stylesheet" href="../css/style.css"></head>
+<body class="admin-page">
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">💻</span>
+    <span class="brand-text"><strong>LAB ROOM</strong><small>Computer Laboratory<br>Booking System</small></span>
+  </a>
+  <div class="nav-label">MENU</div>
+  <nav class="side-nav"><a class="" href="admin.html"><span>📊</span>Dashboard</a>
+<a class="active" href="lab-management.html"><span>🏫</span>Lab Management</a>
+<a class="" href="class-schedule.html"><span>🗓️</span>Class Schedule</a>
+<a class="" href="computer-management.html"><span>💻</span>Computer Management</a>
+<a class="" href="booking-management.html"><span>📋</span>Booking Management</a></nav>
+  <div class="sidebar-bottom">
+    <div class="nav-label">SYSTEM</div>
+    <nav class="side-nav">
+      <a href="../admin/admin.html"><span>⚙️</span>System Settings</a>
+      <a href="../index.html"><span>↪</span>User Site</a>
+    </nav>
+  </div>
+</aside>
+<section class="main-area">
+<header class="topbar">
+  <div class="topbar-left"><button type="button" class="menu-btn" aria-label="เปิดเมนู">☰</button>
+    <div><div class="topbar-title">Admin Control Center</div><div class="topbar-sub">จัดการระบบห้องปฏิบัติการ</div></div>
+  </div>
+  <div class="user-chip"><div><strong>Administrator</strong><small>ผู้ดูแลระบบ</small></div><div class="user-avatar">🛡️</div></div>
+</header>
+<main class="container">
+<section class="page-head"><div><p class="eyebrow">ADMIN · LAB MANAGEMENT</p><h1>จัดการห้อง Lab</h1><p>เพิ่มห้องได้ไม่จำกัดจำนวน และกำหนดจำนวน Computer ของแต่ละห้องได้</p></div><button class="btn btn-primary" id="addLabBtn">＋ เพิ่มห้อง Lab</button></section>
+<div id="labTable" class="table-wrap"></div>
+<div id="labModal" class="modal hidden"><div class="modal-box"><button class="modal-close" id="closeModal">×</button><h2 id="modalTitle">เพิ่มห้อง Lab</h2>
+<form id="labForm"><input type="hidden" id="editRoomId"><div class="field"><label>ชื่อห้อง *</label><input id="roomName" required placeholder="LAB 05"></div><div class="field"><label>อาคาร</label><input id="building" placeholder="อาคาร 1"></div><div class="field"><label>ชั้น</label><input id="floor" placeholder="2"></div><div class="field"><label>จำนวน Computer *</label><input id="computerCount" type="number" min="1" max="200" value="40" required></div><div class="field"><label>สถานะ</label><select id="roomStatus"><option value="active">เปิดใช้งาน</option><option value="inactive">ปิดใช้งาน</option></select></div><button class="btn btn-primary full" type="submit">บันทึกข้อมูล</button></form></div></div>
+</main>
+<footer>LAB ROOM © 2026 · University Computer Laboratory Booking System</footer>
+</section></div>
+<script src="../js/main.js"></script><script src="../js/lab-management.js"></script>
+</body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Schedule | LAB ROOM</title><link rel="stylesheet" href="../css/style.css"></head>
+<body class="admin-page">
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">💻</span>
+    <span class="brand-text"><strong>LAB ROOM</strong><small>Computer Laboratory<br>Booking System</small></span>
+  </a>
+  <div class="nav-label">MENU</div>
+  <nav class="side-nav"><a class="" href="admin.html"><span>📊</span>Dashboard</a>
+<a class="" href="lab-management.html"><span>🏫</span>Lab Management</a>
+<a class="active" href="class-schedule.html"><span>🗓️</span>Class Schedule</a>
+<a class="" href="computer-management.html"><span>💻</span>Computer Management</a>
+<a class="" href="booking-management.html"><span>📋</span>Booking Management</a></nav>
+  <div class="sidebar-bottom">
+    <div class="nav-label">SYSTEM</div>
+    <nav class="side-nav">
+      <a href="../admin/admin.html"><span>⚙️</span>System Settings</a>
+      <a href="../index.html"><span>↪</span>User Site</a>
+    </nav>
+  </div>
+</aside>
+<section class="main-area">
+<header class="topbar">
+  <div class="topbar-left"><button type="button" class="menu-btn" aria-label="เปิดเมนู">☰</button>
+    <div><div class="topbar-title">Admin Control Center</div><div class="topbar-sub">จัดการระบบห้องปฏิบัติการ</div></div>
+  </div>
+  <div class="user-chip"><div><strong>Administrator</strong><small>ผู้ดูแลระบบ</small></div><div class="user-avatar">🛡️</div></div>
+</header>
+<main class="container">
+<section class="page-head"><div><p class="eyebrow">ADMIN · CLASS SCHEDULE</p><h1>ตารางเรียน</h1><p>เพิ่มตารางเรียนของแต่ละห้อง เพื่อให้ระบบล็อกช่วงเวลาที่มีเรียนโดยอัตโนมัติ</p></div><button class="btn btn-primary" id="addClassBtn">＋ เพิ่มตารางเรียน</button></section>
+<div id="scheduleAdminTable" class="table-wrap"></div>
+<div id="classModal" class="modal hidden"><div class="modal-box"><button class="modal-close" id="closeClassModal">×</button><h2 id="classModalTitle">เพิ่มตารางเรียน</h2><form id="classForm"><input type="hidden" id="editScheduleId">
+<div class="field"><label>ห้อง Lab *</label><select id="classRoom" required></select></div><div class="field"><label>วัน *</label><select id="classDay"><option value="1">จันทร์</option><option value="2">อังคาร</option><option value="3">พุธ</option><option value="4">พฤหัสบดี</option><option value="5">ศุกร์</option><option value="6">เสาร์</option><option value="7">อาทิตย์</option></select></div>
+<div class="field"><label>เวลาเริ่ม *</label><input id="classStart" type="time" required></div><div class="field"><label>เวลาสิ้นสุด *</label><input id="classEnd" type="time" required></div>
+<div class="field"><label>รหัสวิชา</label><input id="courseCode" placeholder="CS101"></div><div class="field"><label>ชื่อวิชา *</label><input id="courseName" required placeholder="Web Programming"></div>
+<div class="field"><label>อาจารย์</label><input id="teacher" placeholder="อาจารย์สมชาย"></div><div class="field"><label>กลุ่มเรียน</label><input id="classGroup" placeholder="1"></div>
+<div id="classError" class="error-box hidden"></div><button class="btn btn-primary full" type="submit">บันทึกตารางเรียน</button></form></div></div>
+</main>
+<footer>LAB ROOM © 2026 · University Computer Laboratory Booking System</footer>
+</section></div>
+<script src="../js/main.js"></script><script src="../js/class-schedule.js"></script>
+</body></html>
