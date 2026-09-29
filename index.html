@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | LAB ROOM</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">💻</span>
+    <span class="brand-text"><strong>LAB ROOM</strong><small>Computer Laboratory<br>Booking System</small></span>
+  </a>
+  <div class="nav-label">MENU</div>
+  <nav class="side-nav"><a class="active" href="index.html"><span>⌂</span>Home</a>
+<a class="" href="pages/dashboard.html"><span>📊</span>Dashboard</a>
+<a class="" href="pages/rooms.html"><span>🏫</span>Rooms</a>
+<a class="" href="pages/my-booking.html"><span>📅</span>My Booking</a>
+<a class="" href="pages/contact.html"><span>💬</span>Contact</a>
+<a href="admin/admin.html"><span>⚙️</span>Admin</a></nav>
+  <div class="sidebar-bottom">
+    <div class="nav-label">SYSTEM</div>
+    <nav class="side-nav">
+      <a href="pages/contact.html"><span>⚙️</span>Help & Support</a>
+      <a href="index.html"><span>↪</span>Home</a>
+    </nav>
+  </div>
+</aside>
+<section class="main-area">
+<header class="topbar">
+  <div class="topbar-left"><button type="button" class="menu-btn" aria-label="เปิดเมนู">☰</button>
+    <div><div class="topbar-title">LAB ROOM</div><div class="topbar-sub">ระบบจองคอมพิวเตอร์ห้องปฏิบัติการมหาวิทยาลัย</div></div>
+  </div>
+  <div class="user-chip"><div><strong>Student</strong><small>นักศึกษา</small></div><div class="user-avatar">👨‍🎓</div></div>
+</header>
+<main class="container">
+<section class="page-head">
+  <div><p class="eyebrow">UNIVERSITY COMPUTER LABORATORY</p><h1>จองคอมพิวเตอร์ง่าย ๆ<br><span style="color:var(--accent-dark)">ในห้อง Lab ของมหาวิทยาลัย</span></h1>
+  <p>ตรวจสอบห้องว่าง ตารางเรียน และสถานะคอมพิวเตอร์แบบ Real-time ก่อนจอง</p></div>
+  <a class="btn btn-primary" href="pages/dashboard.html">🔎 ตรวจสอบห้องว่าง</a>
+</section>
+<section class="card" style="padding:28px;background:linear-gradient(135deg,#eef6ff,#fff)">
+  <div class="room-detail">
+    <div><p class="eyebrow">LAB ROOM SYSTEM</p><h2 style="font-size:30px;margin-bottom:8px">เรียนสะดวก จองเป็นระบบ 💻</h2>
+    <p style="color:var(--muted);max-width:620px">เลือกห้อง เลือกวันที่และเวลา จากนั้นเลือกเครื่องคอมพิวเตอร์ที่ว่างได้ทันที ระบบจะแยกสถานะห้อง มีเรียน / ว่าง / บางส่วน / เต็ม ให้ดูง่าย</p>
+    <div class="admin-actions"><a class="btn btn-primary" href="pages/dashboard.html">🔵 ดูสถานะห้อง</a><a class="btn btn-secondary" href="pages/rooms.html">🏫 ดูห้องทั้งหมด</a></div></div>
+    <div class="room-photo">🖥️</div>
+  </div>
+</section>
+<section class="section-heading"><div><p class="eyebrow">SYSTEM OVERVIEW</p><h2>ฟังก์ชันหลัก</h2></div></section>
+<div class="stats-grid" style="grid-template-columns:repeat(4,1fr)">
+  <div class="card stat-card"><div class="stat-icon">🏫</div><div><strong id="homeRooms">0</strong><small>ห้อง Lab</small></div></div>
+  <div class="card stat-card"><div class="stat-icon">💻</div><div><strong id="homeComputers">0</strong><small>Computer</small></div></div>
+  <div class="card stat-card"><div class="stat-icon">🔵</div><div><strong id="homeAvailable">0</strong><small>เครื่องพร้อมใช้งาน</small></div></div>
+  <div class="card stat-card blue"><div class="stat-icon">🗓️</div><div><strong>24/7</strong><small>ตรวจสอบสถานะ</small></div></div>
+</div>
+<div class="rooms-grid">
+  <article class="card" style="padding:20px"><div style="font-size:28px">📊</div><h3>Dashboard</h3><p style="font-size:11px;color:var(--muted)">ดูห้องว่าง จำนวนคอม และตารางเรียนในหน้าเดียว</p></article>
+  <article class="card" style="padding:20px"><div style="font-size:28px">💻</div><h3>Computer Grid</h3><p style="font-size:11px;color:var(--muted)">เลือก PC จากตารางสีเขียว / แดง พร้อมป้องกันการจองซ้ำ</p></article>
+  <article class="card" style="padding:20px"><div style="font-size:28px">✅</div><h3>Check-in</h3><p style="font-size:11px;color:var(--muted)">จองพร้อมเช็คอินได้ทันที หรือเช็คอินภายใน 20 นาที</p></article>
+</div>
+</main>
+<footer>LAB ROOM © 2026 · University Computer Laboratory Booking System</footer>
+</section></div>
+<script src="js/main.js"></script><script>document.addEventListener("DOMContentLoaded",()=>{seedData();document.getElementById("homeRooms").textContent=getRooms().length;document.getElementById("homeComputers").textContent=getComputers().length;document.getElementById("homeAvailable").textContent=getComputers().filter(x=>x.status==="active").length;});</script>
+</body></html>
